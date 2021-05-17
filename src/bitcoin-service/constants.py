@@ -1,0 +1,1 @@
+BITCOIN_HISTORY_API_URL = "https://api.coinranking.com/v1/public/coin/{}/history/{}"
