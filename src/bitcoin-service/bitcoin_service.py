@@ -158,8 +158,12 @@ class BitcoinService():
                 mean = df['price'].mean()
                 variance = df.var(ddof=0)['price']
                 std_dev = df.std(ddof=0)['price']
-                high_range = mean + 2 * std_dev
-                low_range = mean - 2 * std_dev
+                high_range = mean + (2 * std_dev)
+                low_range = mean - (2 * std_dev)
+                # Volatility flag is calculated by calculating adding mean with 2 standard deviation 
+                # and subtracting mean with 2 standard deviation thus getting the high and low range 
+                # checking if the sub data frame (dataframe for day) contains any data in high or low range 
+                # if any available setting volatility to true
                 volatility_flag = ((df['price'] > high_range).any() or (df['price'] < low_range).any())
                 filtered_data.loc[index,'dailyAverage'] = mean
                 filtered_data.loc[index,'dailyVariance'] = variance

@@ -19,7 +19,7 @@ Serverless Framework is a free and open source web framework written using Node.
 
 In order to run this application on local follow the below steps.
 
-Steps outlined assumes that python3, node and npm is already installed and available in the machine.
+Steps outlined assumes that python3, node and npm is already installed and available in the machine. Have node version v10 and above can be validated by using node -v command.
 
 1. <b> Install serverless</b>: npm install -g serverless
 2. <b> Install serverless plugins</b>:  
